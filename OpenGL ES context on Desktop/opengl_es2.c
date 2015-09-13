@@ -4,6 +4,20 @@ This code is modified version of : https://www.opengl.org/wiki/Tutorial:_OpenGL_
 
 http://stackoverflow.com/a/32549549/1673000
 
+
+
+    Version 3, 2012/03/28
+
+        Add support for any OpenGL-ES version, not just version 2.0. 
+        Alias GLX_CONTEXT_ES2_PROFILE_BIT_EXT with GLX_CONTEXT_ES_PROFILE_BIT_EXT 
+        and the extension name GLX_EXT_create_context_es2_profile with GLX_EXT_create_context_es_profile.
+        
+    VERSION and PROFILE are working orthogonally
+    
+    So to create an OpenGL ES X.Y context just set appropriate version inside context_attribs[]
+
+
+
 Compile it with gcc opengl_es2.c -o opengl_es2 -lGL -lGLU -lX11 -lXxf86vm
 
 */
