@@ -246,7 +246,7 @@ int main(int argc, char* argv[])
     // Sync to ensure any errors generated are processed.
     XSync( display, False );
     if ( !ctxErrorOccurred && ctx )
-      printf( "Created GL %d.%d context\n", DESIRED_GL_ES_MAJOR_VERSION, DESIRED_GL_ES_MINOR_VERSION );
+      printf( "Created GL ES %d.%d context\n", DESIRED_GL_ES_MAJOR_VERSION, DESIRED_GL_ES_MINOR_VERSION );
     else
     {
       // Couldn't create GL 3.0 context.  Fall back to old-style 2.x context.
@@ -260,7 +260,7 @@ int main(int argc, char* argv[])
  
       ctxErrorOccurred = false;
  
-      printf( "Failed to create GL %d.%d context"
+      printf( "Failed to create GL ES %d.%d context"
               " ... using old-style GLX context\n", DESIRED_GL_ES_MAJOR_VERSION, DESIRED_GL_ES_MINOR_VERSION );
       ctx = glXCreateContextAttribsARB( display, bestFbc, 0, 
                                         True, context_attribs );
